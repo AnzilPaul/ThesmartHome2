@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype HTML>
+<html>
+    <head>
+        <title>Smart Home</title>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/style1.css' %}" />
+        <style>
+            .cls1{
+                color:white;
+                font-size:20px;
+            }
+            .cls2{
+                font-size:18px;
+            }
+            .rectangle{
+                width:300px;
+                height:180px;
+                border:0;
+                background-color:white;
+            }
+            .nounderline{
+                text-decoration: none;
+            } 
+            
+        </style>
+    </head>
+    <body>
+        <div style="background-color:#00adb5;">
+            <table>
+                <tr>
+                    <td><img src="{% static 'images/Smart home logo.png' %}" style="width:50px; height:50px;" /></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Home</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Smart Control Hub</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">About Us</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Contact Us</a></td>
+                    <td>
+                    {% if user.is_authenticated %}
+                        &emsp;&emsp;&emsp;&emsp;&emsp;<a href="{% url 'myapp1:logout' %}" class="cls1 nounderline">Logout</a>
+                    {% else %}
+                            &emsp;&emsp;&emsp;&emsp;&emsp;<a href="{% url 'myapp1:user_login' %}" class="cls1 nounderline">Login</a>
+                    {% endif %}
+                    </td>
+                            <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1"><img src="{% static 'images/notify logo.png' %}" style="width:40pxpx; height:40px;" /></a></td>
+                    <td>&emsp;&emsp;<a href="#" class="cls1"><img src="{% static 'images/user profile logo.png' %}" style="width:40px; height:40px;"/></a></td>
+                </tr>
+            </table>
+        </div>
+        <h2 style="color:indigo;">Smart Control Hub</h2>
+        <p>Manage your smart home system and preferences</p><br />
+        <center>
+        <table>
+            <tr>
+                
+                <td><img src="{% static 'images/101managdevices.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="#">Manage Devices</a></td>
+                <td>
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+                <td><img src="{% static 'images/100managusers.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="#">Manage Users</a></td>
+                <td>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+                <td><img src="{% static 'images/102controldevices.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="{% url 'myapp1:turn_on' %}">Control Devices</a></td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/sensormonitoring.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="#">Sensor Data Monitoring</a></td>
+                <td>
+                    &emsp;&emsp;&emsp;
+                </td>
+                <td><img src="{% static 'images/smarthouse.jpg' %}" style="width:200px; height:130px;" />
+                </td>
+                <td>
+                    &emsp;&emsp;&emsp;
+                </td>
+                <td><img src="{% static 'images/devicescheduling.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="#">Device Scheduling</a></td>
+            </tr>
+            <tr>
+                <td><img src="{% static 'images/SystemDashboard.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="#">System Dashboard</a></td>
+
+                <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                   
+                </td>
+
+                <td><div class="rectangle"></div></td>
+
+                <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                   
+                </td>
+
+                <td><img src="{% static 'images/CustomAutomation.jpg' %}" style="width:200px; height:130px;" /><br />
+                <a href="#">Custom Automation</a></td>
+            </tr>
+        </table>
+        </center>
+    </body>
+</html>

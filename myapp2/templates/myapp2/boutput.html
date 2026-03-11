@@ -1,0 +1,73 @@
+<!doctype HTML>
+<HTML>
+    <HEAD>
+        <TITLE>Output Bedroom Lights</TITLE>
+        <style>
+            .circle{
+                width:300px;
+                height:300px;
+                border-radius:50%;
+                border:2px solid black;
+            }
+            .on{
+                background-color:red;
+            }
+            .off{
+                background-color:black;
+            }
+            .circle2{
+                width:300px;
+                height:300px;
+                border-radius:50%;
+                border:2px solid black;
+                background-color:black;
+            }
+        </style>
+        <script>
+            function checkStatus(){
+                fetch('/get_status/')
+                .then(response => response.json())
+                .then(data => {
+                    let light=document.getElementsByClassName("circle")[0];
+                    if(data.statuso == "ON"){
+                        light.style.background="yellow";
+                    }
+                    else{
+                        light.style.background="black";
+                    }
+                });
+            }
+            setInterval(checkStatus, 2000);
+        </script>
+    </HEAD>
+    <BODY>
+        <br />
+        <br />
+        <br />
+        <br />
+        <table>
+            <tr>
+                <td>&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;
+                </td>
+                <td>
+                    <div class="circle"></div>
+                    <!--<div class="circle {% if statuso == 'ON' %}on{% else %}off{% endif %}"></div>-->
+                </td>
+                <td>&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                    &emsp;
+                </td>
+                
+                <td>
+                    <div class="circle2"></div>
+                </td>
+            </tr>
+        </table>
+    </BODY>
+</HTML>

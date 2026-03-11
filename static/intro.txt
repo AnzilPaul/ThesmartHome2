@@ -1,0 +1,2 @@
+This web app is developed mainly to turn ON a software bulb when we click ON button
+in this web application. We can also turn it OFF by clicking OFF button.

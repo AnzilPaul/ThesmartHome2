@@ -1,0 +1,151 @@
+{% load static %}
+<!doctype HTML>
+<html>
+    <head>
+        <title>Control Light1</title>
+        <style>
+            .rectangle{
+                width:170px;
+                height:150px;
+                background-color:purple;
+                border:2px solid black;
+            }
+            .con{
+                background-color:chartreuse;
+                width:80px;
+                height:80px;
+            }
+            .coff{
+                background-color:red;
+                width:80px;
+                height:80px;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="{% url 'myapp1:turn_on' %}">
+        {% csrf_token %}
+            <table>
+                <tr>
+                    <br />
+                    <center>
+                        <div class="rectangle">
+                            <img src="{% static 'images/bulb 12.jpg' %}" style="width:100px; height:100px; margin-top:20px;" />
+                        </div>
+                    </center>
+                </tr>
+                <tr>
+                    <center>
+                    <h3><u>Bedroom Light1</u></h3>
+                </center>
+                </tr>
+                <tr>
+                    <td>
+                        &emsp;&emsp;&emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;
+                        &emsp;&emsp;&emsp;&emsp;
+                        
+                        <input type="submit" name="control1" value="ON" class="con" />
+                    </td>
+                    <td>
+                        &emsp;&emsp;
+                        
+                        
+                    </td>
+                    <td>
+                        &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                       &emsp;&emsp;&emsp;&emsp;
+                        <input type="submit" name="control1" value="OFF" class="coff" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><br /></td>
+                </tr>
+    <!--        <tr>
+                
+                    <td>
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;
+                        Device name:&emsp;&emsp;&emsp;&nbsp;&nbsp;<input type="text" name="dn5" /></td>
+            </tr>
+                    <tr>
+            <td>
+                &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;
+                Current status:&emsp;&emsp;&emsp;&nbsp;<input type="text" name="currsta" /><br /></td></tr>
+            <tr>
+            <td>
+                &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;
+                Device type:&emsp;&emsp;&emsp;
+                &nbsp;&nbsp;
+                <input type="text" name="dtyp1" /><br /></td></tr>
+            <tr>
+            <td>
+                &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;
+                Mode:&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;
+                <input type="text" name="m1" /><br /></td></tr>
+            <tr><td>
+                &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;
+                      &emsp;&emsp;&emsp;
+            Power level(in %):&emsp;&nbsp;&nbsp;<input type="number" name="pow1" /><br /></td></tr>
+            
+            </tr>
+            <tr><td>
+            &emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;
+            &emsp;&emsp;&emsp;
+            <input type="submit" name="conf1" value="Configure Device" />&emsp;&emsp;&emsp;</td>
+            <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</td>
+            <td><input type="submit" name="rem1" value="Remove Device" /></td></tr>-->
+        </table>
+        </form>
+
+    </body>
+</html>

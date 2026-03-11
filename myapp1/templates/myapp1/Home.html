@@ -1,0 +1,110 @@
+{% load static %}
+<!doctype HTML>
+<html>
+    <head>
+        <title>Smart Home</title>
+        <link type="text/css" rel="stylesheet" href="{% static 'css/style1.css' %}" />
+        <style>
+            .cls1{
+                color:white;
+                font-size:20px;
+            }
+            .cls2{
+                font-size:25px;
+            }
+            .cls3{
+                font-size:18px;
+            }
+            .nounderline{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="background-color:#00adb5;">
+            <table>
+                <tr>
+                    <td><img src="{% static 'images/Smart home logo.png' %}" style="width:50px; height:50px;" /></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Home</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Smart Control Hub</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">About Us</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Contact Us</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1 nounderline">Login</a></td>
+                    <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="#" class="cls1"><img src="{% static 'images/notify logo.png' %}" style="width:40pxpx; height:40px;" /></a></td>
+                    <td>&emsp;&emsp;<a href="#" class="cls1"><img src="{% static 'images/user profile logo.png' %}" style="width:40px; height:40px;"/></a></td>
+                </tr>
+            </table>
+        </div>
+        <center>
+        <table>
+            <tr>
+                <td><br /><br />
+                   <h4 class="cls2">CONTROL &nbsp;YOUR &nbsp;HOME &nbsp;FROM </h4>
+                   <h4 class="cls2">ANYWHERE</h4>
+                   <p class="cls3">We provide an intelligent, easy-to-use<br />
+                    Smart Home Automation System that<br />
+                    allows you to control, monitor and<br />
+                    automate all your home devices from<br />
+                    a single mobile app. We bring comfort,<br />
+                    security and energy efficiency into<br />
+                    everyday living by connecting smart<br />
+                    devices through a seamless, user-<br />
+                    friendly platform.</p>
+                </td>
+                <td><br /><br />
+                    &emsp;&emsp;&emsp;
+                </td>
+                <td><br /><br /><br />
+                    <img src="{% static 'images/smart home3.jpg' %}" style="width:750px; height:390px;"/>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <!--&emsp;&emsp;&emsp;&emsp;<input type="submit" name="s1" value="Sign Up" style="background-color:#500caf; color:white; width:150px; height:49px; border:0; border-radius: 40px; font-size:20px; font: bold 1px;" />-->
+                    <a href="{% url 'myapp1:register' %}"><button type="button" style="background-color:#500caf; color:white; width:150px; height:49px; border:0; border-radius: 40px; font-size:20px; font: bold 1px;" >Sign Up</button></a>
+                </td>
+            </tr>
+        </table>
+        </center>
+        <br />
+        
+        <table>
+            <tr>
+                <td>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;&emsp;&emsp;
+                </td>
+                <td>
+                    Quick Links<br /><br />
+                    <a href="#">Home</a><br />
+                    <a href="#">Privacy Policy</a><br />
+                    <a href="#">Terms & Conditions</a>
+                </td>
+                <td>&emsp;&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;
+                    
+                </td>
+                <td>
+                    Support<br />
+                    <br />
+                    <a href="#">FAQs</a>
+                </td>
+                <td>&emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;
+                    &emsp;&emsp;&emsp;
+                    &emsp;
+                </td>
+                <td>
+                    Contact<br />
+                    <br />
+                    <a href="#">Contact Us</a>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>
