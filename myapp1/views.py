@@ -36,7 +36,7 @@ def register(request):
         if user_form.is_valid() and register_form.is_valid():
             user=user_form.save(commit=False)
             #Encrypt password
-            user.set_password(user.password)
+            user.set_password(user_form.cleaned_data['password'])
             #Split full name into first and last name
             full_name=user_form.cleaned_data['full_name']
             parts=full_name.split(" ", 1)
@@ -77,7 +77,8 @@ def user_login(request):
                 return HttpResponse("Your account is inactive.")
         else:
             print("Login failed")
-            return HttpResponse("Invalid login details")
+            print("Invalid login details")
+            return render(request,"myapp1/Login2.html")
     else:
         return render(request,"myapp1/Login.html")
 @login_required
